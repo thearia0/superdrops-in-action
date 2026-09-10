@@ -69,6 +69,7 @@ def test_cleo_sdm_1dkid_condevap_only(
 
     ### time and grid parameters
     # NOTE: these must be consistent with CLEO initial condition binary files(!)
+    ###ask if can be changed
     z_min = -25 * si.m  # (!) must be consistent with CLEO
     z_max = 3200 * si.m  # (!) must be consistent with CLEO
     z_delta = 25 * si.m  # (!) must be consistent with CLEO

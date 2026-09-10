@@ -21,7 +21,7 @@ path2build=$2
 start_id=$3 # inclusive start of run_ids
 end_id=$4 # inclusive end of run_ids
 isfigures=FALSE
-python=/work/bm1183/m300950/bin/envs/superdrops-in-action/bin/python
+python=$(which python)
 path2initcondsscripts=${path2cleo1dkid}/libs/cleo_sdm/initconds
 
 runtype=condevap_only
