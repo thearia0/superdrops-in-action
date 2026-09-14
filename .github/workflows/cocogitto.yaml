@@ -15,13 +15,13 @@ jobs:
         uses: oknozor/cocogitto-action@v3
         with:
           check-latest-tag-only: true
-          git-user: 'yoctoyotta1024'
-          git-user-email: 'yoctoyotta1024@yahoo.com'
+          git-user: 'thearia0'
+          git-user-email: 'daria.klimaszewska02@gmail.com'
 
   release:
     needs: cog_check_job
     # Only release new version when merging into `origin/main`.`
-    if: "github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository_owner == 'yoctoyotta1024'"
+    if: "github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository_owner == 'thearia0'"
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -37,8 +37,8 @@ jobs:
         with:
           release: true
           check-latest-tag-only: true
-          git-user: 'yoctoyotta1024'
-          git-user-email: 'yoctoyotta1024@yahoo.com'
+          git-user: 'thearia0'
+          git-user-email: 'daria.klimaszewska02@gmail.com'
 
       # The version number is accessible as a github action output
       - name: Print version
