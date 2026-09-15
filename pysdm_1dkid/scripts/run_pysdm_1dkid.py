@@ -27,6 +27,7 @@ from PySDM.physics import convert_to, si
 
 import matplotlib.pyplot as plt
 from open_atmos_jupyter_utils import show_plot
+import os
 
 # %%
 parser = argparse.ArgumentParser()
@@ -174,8 +175,10 @@ def plot_with_iterations(
                 else:
                     ax1.axvline(t, color=colors[line_t])
         last_t = t
-
-    show_plot(filename=fname, inline_format="png")
+    if os.environ.get("CI"):
+        plt.savefig("run_pysdm_1dkid_result.png")
+    else:
+        show_plot(filename=fname, inline_format="png")
 
 
 # %%
