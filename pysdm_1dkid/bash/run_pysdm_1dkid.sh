@@ -17,18 +17,18 @@
 ### -------- to compile, and your python script -------- ###
 ### ---------------------------------------------------- ###
 ### check settings in configfile specified below too(!)
-python="/work/bm1183/m300950/bin/envs/clouds/bin/python"
-pythonlibs="/work/bm1183/m300950/bin/envs/clouds/lib/python3.13/site-packages/"
+python=$(which python)
+runscript="$(pwd)/pysdm_1dkid/scripts/run_pysdm_1dkid.py"
+config_filename="$(pwd)/pysdm_1dkid/share/config.yaml"
 
-runscript="/home/m/m300950/superdrops-in-action/pysdm_1dkid/scripts/run_pysdm_1dkid.py"
-config_filename="/home/m/m300950/superdrops-in-action/pysdm_1dkid/share/config.yaml"
+
 ### ---------------------------------------------------- ###
 ### ---------------------------------------------------- ###
 ### ---------------------------------------------------- ###
 
 ### ---- set relevant packages and runtime settings ---- ###
 # (optional) prepend to python path to make import searches faster
-export PYTHONPATH=${pythonlibs}:${path2cleopythonbindings}:${path2cleo1dkid}:${PYTHONPATH}
+export PYTHONPATH=$(pwd):${PYTHONPATH}
 ### ---------------------------------------------------- ###
 
 echo "${python} ${runscript} --config_filename=${config_filename}"
