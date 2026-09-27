@@ -28,5 +28,5 @@ sdm_settings:
 
 ### Output File Parameters ###
 outputfiles:
-  binpath: "/work/bm1183/m300950/superdrops-in-action/pysdm_1dkid/build/bin/"    # path to output directory
-  figspath: "/work/bm1183/m300950/superdrops-in-action/pysdm_1dkid/build/plots/"    # path to output directory
+  binpath: "./pysdm_1dkid/build/bin/"    # path to output directory
+  figspath: "./pysdm_1dkid/build/plots/"    # path to output directory
