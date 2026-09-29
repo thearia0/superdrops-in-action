@@ -30,7 +30,7 @@ jobs:
           mkdir -p ./build/figs
 
       - name: Install PySDM-examples
-        run: pip install PyMPDATA-examples
+        run: pip install PySDM-examples
 
       - name: Run PySDM 1dkid
         run: bash ./pysdm_1dkid/bash/run_pysdm_1dkid.sh
