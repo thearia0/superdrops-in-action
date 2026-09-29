@@ -29,6 +29,9 @@ jobs:
           mkdir -p ./build/bin
           mkdir -p ./build/figs
 
+      - name: Install PySDM-examples
+        run: pip install PyMPDATA-examples
+
       - name: Run PySDM 1dkid
         run: bash ./pysdm_1dkid/bash/run_pysdm_1dkid.sh
 
